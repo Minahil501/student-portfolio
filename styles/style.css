@@ -251,3 +251,19 @@ main {
 .clubs-note h2 {
   margin-bottom: 6px;
 }
+/* clubs.html: responsive layout */
+@media (max-width: 992px) {
+  .clubs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .clubs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .club-card:hover {
+    transform: none;
+  }
+}
