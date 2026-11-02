@@ -181,3 +181,73 @@ main {
     font-size: 1.9rem;
   }
 }
+/* ==========================================================
+   clubs.html: Club Categories page (Member 1)
+   ========================================================== */
+.clubs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.club-card {
+  border-top: 8px solid var(--accent);
+  transition: transform 0.2s;
+}
+
+.club-card:hover {
+  transform: translateY(-5px) rotate(-0.5deg);
+}
+
+.club-icon {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  margin-bottom: 14px;
+  border-radius: 16px;
+  font-size: 2.2rem;
+  background: var(--soft);
+}
+
+.club-card h2 {
+  margin-bottom: 8px;
+  font-size: 1.3rem;
+}
+
+.club-card p {
+  color: var(--muted);
+}
+
+.club-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+  list-style: none;
+}
+
+.club-tags li {
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  background: var(--soft);
+}
+
+.club-tech     { --accent: var(--blue);   --soft: #e3f2fe; }
+.club-sports   { --accent: var(--teal);   --soft: #dcf7f3; }
+.club-cultural { --accent: var(--pink);   --soft: #ffe3ee; }
+.club-debate   { --accent: var(--purple); --soft: #efe9ff; }
+.club-service  { --accent: #3cb371;       --soft: #e2f6e9; }
+.club-media    { --accent: var(--orange); --soft: #fff0e0; }
+
+.clubs-note {
+  margin-top: 36px;
+  text-align: center;
+  background: linear-gradient(90deg, var(--yellow), var(--orange));
+}
+
+.clubs-note h2 {
+  margin-bottom: 6px;
+}
