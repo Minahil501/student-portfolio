@@ -181,3 +181,112 @@ main {
     font-size: 1.9rem;
   }
 }
+
+/* ==========================================================
+   Team Member Styles
+   Each team member appends their page styles below this line.
+   ========================================================== */
+
+  /* ==========================================================
+  Team Lead: Home Page Styles Minahil Kamran
+   ========================================================== */
+.home-hero {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 30px;
+  align-items: center;
+  padding: 60px 50px;
+  border-radius: 28px;
+  color: #fff;
+  background: linear-gradient(135deg, var(--purple), var(--pink) 55%, var(--orange));
+  box-shadow: var(--shadow);
+}
+
+.home-hero h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.home-hero p {
+  margin: 16px 0 26px;
+  font-size: 1.05rem;
+  opacity: 0.95;
+}
+
+.home-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.home-hero-art {
+  font-size: 4.5rem;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.home-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.home-stat {
+  text-align: center;
+  color: var(--muted);
+}
+
+.home-stat strong {
+  display: block;
+  font-size: 2rem;
+  color: var(--pink);
+}
+
+.home-benefits {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.home-benefit {
+  border-top: 6px solid var(--teal);
+}
+
+.home-benefit:nth-child(2) { border-top-color: var(--orange); }
+.home-benefit:nth-child(3) { border-top-color: var(--purple); }
+.home-benefit:nth-child(4) { border-top-color: var(--pink); }
+
+.home-benefit .icon {
+  font-size: 2.2rem;
+}
+
+.home-benefit h3 {
+  margin: 8px 0 6px;
+}
+
+.home-benefit p,
+.home-explore p {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.home-explore {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.home-explore a {
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.home-explore a:hover {
+  transform: translateY(-4px);
+}
+
+.home-explore span {
+  font-size: 2rem;
+}
