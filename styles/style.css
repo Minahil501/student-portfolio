@@ -290,3 +290,33 @@ main {
 .home-explore span {
   font-size: 2rem;
 }
+
+/* index.html: responsive layout */
+@media (max-width: 900px) {
+  .home-hero {
+    grid-template-columns: 1fr;
+    padding: 40px 24px;
+    text-align: center;
+  }
+
+  .home-hero-actions {
+    justify-content: center;
+  }
+
+  .home-stats,
+  .home-benefits {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .home-hero h1 {
+    font-size: 2rem;
+  }
+
+  .home-stats,
+  .home-benefits,
+  .home-explore {
+    grid-template-columns: 1fr;
+  }
+}
