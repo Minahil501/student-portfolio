@@ -1,10 +1,13 @@
+
 /* ==========================================================
-   UCP Clubs Portal: shared stylesheet
+   UCP Clubs Portal: Shared Stylesheet
    Baseline styles added by the Team Lead.
    Each team member appends their page styles at the END.
    ========================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+/* ---------- CSS Variables ---------- */
 
 :root {
   --pink: #ff4f8b;
@@ -20,6 +23,8 @@
   --radius: 18px;
   --shadow: 0 10px 25px rgba(43, 33, 64, 0.10);
 }
+
+/* ---------- Global Styles ---------- */
 
 * {
   box-sizing: border-box;
@@ -38,7 +43,8 @@ a {
   color: inherit;
 }
 
-/* ---------- Header and navigation ---------- */
+/* ---------- Header and Navigation ---------- */
+
 .site-header {
   position: sticky;
   top: 0;
@@ -89,7 +95,8 @@ a {
   color: var(--pink);
 }
 
-/* ---------- Page layout ---------- */
+/* ---------- Page Layout ---------- */
+
 main {
   max-width: 1200px;
   margin: 0 auto;
@@ -158,6 +165,7 @@ main {
 }
 
 /* ---------- Footer ---------- */
+
 .site-footer {
   padding: 22px 6%;
   text-align: center;
@@ -166,7 +174,8 @@ main {
   background: var(--ink);
 }
 
-/* ---------- Baseline responsive rules ---------- */
+/* ---------- Baseline Responsive Rules ---------- */
+
 @media (max-width: 768px) {
   .site-header {
     flex-direction: column;
@@ -187,9 +196,12 @@ main {
    Each team member appends their page styles below this line.
    ========================================================== */
 
-  /* ==========================================================
-  Team Lead: Home Page Styles Minahil Kamran
+
+/* ==========================================================
+   Team Lead: Home Page Styles
+   Minahil Kamran
    ========================================================== */
+
 .home-hero {
   display: grid;
   grid-template-columns: 1.4fr 1fr;
@@ -254,9 +266,17 @@ main {
   border-top: 6px solid var(--teal);
 }
 
-.home-benefit:nth-child(2) { border-top-color: var(--orange); }
-.home-benefit:nth-child(3) { border-top-color: var(--purple); }
-.home-benefit:nth-child(4) { border-top-color: var(--pink); }
+.home-benefit:nth-child(2) {
+  border-top-color: var(--orange);
+}
+
+.home-benefit:nth-child(3) {
+  border-top-color: var(--purple);
+}
+
+.home-benefit:nth-child(4) {
+  border-top-color: var(--pink);
+}
 
 .home-benefit .icon {
   font-size: 2.2rem;
@@ -291,7 +311,8 @@ main {
   font-size: 2rem;
 }
 
-/* index.html: responsive layout */
+/* Home Page: Tablet Responsive Layout */
+
 @media (max-width: 900px) {
   .home-hero {
     grid-template-columns: 1fr;
@@ -308,6 +329,8 @@ main {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/* Home Page: Mobile Responsive Layout */
 
 @media (max-width: 560px) {
   .home-hero h1 {
@@ -558,5 +581,268 @@ main {
   .join-table td {
     padding: 10px;
     font-size: 0.88rem;
+  }
+}
+
+
+/* ==========================================================
+   Member 4: Club Achievements Page Styles
+   highlights.html
+   ========================================================== */
+
+.hl-numbers {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.hl-number {
+  padding: 26px 12px;
+  border-radius: var(--radius);
+  text-align: center;
+  color: #fff;
+  box-shadow: var(--shadow);
+}
+
+.hl-number strong {
+  display: block;
+  font-size: 2.3rem;
+  font-weight: 800;
+}
+
+.hl-number:nth-child(1) {
+  background: var(--pink);
+}
+
+.hl-number:nth-child(2) {
+  background: var(--orange);
+}
+
+.hl-number:nth-child(3) {
+  background: var(--teal);
+}
+
+.hl-number:nth-child(4) {
+  background: var(--purple);
+}
+
+.hl-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.hl-card {
+  position: relative;
+  transition: transform 0.2s;
+}
+
+.hl-card:hover {
+  transform: scale(1.03);
+}
+
+.hl-badge {
+  font-size: 2.4rem;
+}
+
+.hl-year {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  padding: 3px 12px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--ink);
+  background: var(--yellow);
+}
+
+.hl-card h3 {
+  margin: 8px 0 6px;
+}
+
+.hl-card p {
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.hl-club {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--purple);
+}
+
+.hl-card.featured {
+  grid-column: span 2;
+  color: #fff;
+  background: linear-gradient(135deg, var(--purple), var(--pink));
+}
+
+.hl-card.featured p,
+.hl-card.featured .hl-club {
+  color: #fff;
+}
+
+/* Highlights Page: Tablet Responsive Layout */
+
+@media (max-width: 900px) {
+  .hl-numbers,
+  .hl-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Highlights Page: Mobile Responsive Layout */
+
+@media (max-width: 560px) {
+  .hl-numbers,
+  .hl-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hl-card.featured {
+    grid-column: auto;
+  }
+}
+
+
+/* ==========================================================
+   Member 2: Upcoming Events Page Styles
+   events.html
+   ========================================================== */
+
+.events-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.events-filters span {
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: var(--shadow);
+}
+
+.events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.event-card {
+  display: grid;
+  grid-template-columns: 100px 1fr auto;
+  gap: 24px;
+  align-items: center;
+  transition: transform 0.2s;
+}
+
+.event-card:hover {
+  transform: translateX(6px);
+}
+
+.event-date {
+  padding: 14px 8px;
+  border-radius: 16px;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(160deg, var(--teal), var(--blue));
+}
+
+.event-card:nth-child(even) .event-date {
+  background: linear-gradient(160deg, var(--pink), var(--orange));
+}
+
+.event-date .day {
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.event-date .month {
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.event-info h2 {
+  font-size: 1.25rem;
+}
+
+.event-info p {
+  color: var(--muted);
+}
+
+.event-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  margin-top: 6px;
+  font-size: 0.9rem;
+  list-style: none;
+  color: var(--muted);
+}
+
+.event-type {
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.type-workshop {
+  background: #e3f2fe;
+  color: #1b6fb3;
+}
+
+.type-competition {
+  background: #ffe3ee;
+  color: #c2185b;
+}
+
+.type-seminar {
+  background: #efe9ff;
+  color: #5a3fd6;
+}
+
+.type-meetup {
+  background: #fff3d6;
+  color: #a86b00;
+}
+
+.events-note {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* Events Page: Mobile Responsive Layout */
+
+@media (max-width: 700px) {
+  .event-card {
+    grid-template-columns: 76px 1fr;
+    gap: 16px;
+  }
+
+  .event-type {
+    grid-column: 1 / -1;
+    justify-self: start;
+  }
+
+  .event-date .day {
+    font-size: 1.6rem;
+  }
+
+  .event-card:hover {
+    transform: none;
   }
 }
