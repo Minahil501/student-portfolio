@@ -407,3 +407,21 @@ main {
   color: #fff;
 >>>>>>> 2bc30bf (Add styles for highlight numbers and achievement cards)
 }
+/* highlights.html: responsive layout */
+@media (max-width: 900px) {
+  .hl-numbers,
+  .hl-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .hl-numbers,
+  .hl-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hl-card.featured {
+    grid-column: auto;
+  }
+}
