@@ -319,4 +319,102 @@ main {
   .home-explore {
     grid-template-columns: 1fr;
   }
+/* ==========================================================
+   events.html: Upcoming Events page (Member 2)
+   ========================================================== */
+.events-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.events-filters span {
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: var(--shadow);
+}
+
+.events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.event-card {
+  display: grid;
+  grid-template-columns: 100px 1fr auto;
+  gap: 24px;
+  align-items: center;
+  transition: transform 0.2s;
+}
+
+.event-card:hover {
+  transform: translateX(6px);
+}
+
+.event-date {
+  padding: 14px 8px;
+  border-radius: 16px;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(160deg, var(--teal), var(--blue));
+}
+
+.event-card:nth-child(even) .event-date {
+  background: linear-gradient(160deg, var(--pink), var(--orange));
+}
+
+.event-date .day {
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.event-date .month {
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.event-info h2 {
+  font-size: 1.25rem;
+}
+
+.event-info p {
+  color: var(--muted);
+}
+
+.event-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  margin-top: 6px;
+  font-size: 0.9rem;
+  list-style: none;
+  color: var(--muted);
+}
+
+.event-type {
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.type-workshop    { background: #e3f2fe; color: #1b6fb3; }
+.type-competition { background: #ffe3ee; color: #c2185b; }
+.type-seminar     { background: #efe9ff; color: #5a3fd6; }
+.type-meetup      { background: #fff3d6; color: #a86b00; }
+
+.events-note {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--muted);
 }
