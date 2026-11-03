@@ -540,3 +540,23 @@ main {
   margin-top: 14px;
 >>>>>>> 1525d75 (Add styles for join steps, schedule table and FAQ)
 }
+/* join.html: responsive layout */
+@media (max-width: 900px) {
+  .join-steps {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 44px;
+  }
+}
+
+@media (max-width: 600px) {
+  .join-steps,
+  .join-rules {
+    grid-template-columns: 1fr;
+  }
+
+  .join-table th,
+  .join-table td {
+    padding: 10px;
+    font-size: 0.88rem;
+  }
+}
