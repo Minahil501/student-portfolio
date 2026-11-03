@@ -26,3 +26,16 @@ Open src/index.html in any web browser.
 | develop | Active development (2 approvals required) |
 | feature/<page-name> | One branch per page, merged into develop through pull requests |
 | release/v1.0 | Testing (QA) before merging into main |
+
+
+## Team
+
+| Name | Role | GitHub |
+|------|------|--------|
+| Minahil Kamran | Team Lead | @Minahil501 |
+| Alina Akhtar | Member | @Alina0075 |
+| Hamia Khalil | Member | @Hamia974 |
+| Laiba Farooq | Member | @laibafarooq0056|
+| Samavia Afzal | Member | @Samavia-afzal |
+
+Version: v1.0
