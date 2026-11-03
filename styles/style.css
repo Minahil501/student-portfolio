@@ -418,3 +418,23 @@ main {
   font-size: 0.9rem;
   color: var(--muted);
 }
+/* events.html: responsive layout */
+@media (max-width: 700px) {
+  .event-card {
+    grid-template-columns: 76px 1fr;
+    gap: 16px;
+  }
+
+  .event-type {
+    grid-column: 1 / -1;
+    justify-self: start;
+  }
+
+  .event-date .day {
+    font-size: 1.6rem;
+  }
+
+  .event-card:hover {
+    transform: none;
+  }
+}
