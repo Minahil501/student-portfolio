@@ -183,6 +183,7 @@ main {
 }
 
 /* ==========================================================
+<<<<<<< HEAD
    Team Member Styles
    Each team member appends their page styles below this line.
    ========================================================== */
@@ -319,4 +320,90 @@ main {
   .home-explore {
     grid-template-columns: 1fr;
   }
+=======
+   highlights.html: Club Achievements page (Member 4)
+   ========================================================== */
+.hl-numbers {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.hl-number {
+  padding: 26px 12px;
+  border-radius: var(--radius);
+  text-align: center;
+  color: #fff;
+  box-shadow: var(--shadow);
+}
+
+.hl-number strong {
+  display: block;
+  font-size: 2.3rem;
+  font-weight: 800;
+}
+
+.hl-number:nth-child(1) { background: var(--pink); }
+.hl-number:nth-child(2) { background: var(--orange); }
+.hl-number:nth-child(3) { background: var(--teal); }
+.hl-number:nth-child(4) { background: var(--purple); }
+
+.hl-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.hl-card {
+  position: relative;
+  transition: transform 0.2s;
+}
+
+.hl-card:hover {
+  transform: scale(1.03);
+}
+
+.hl-badge {
+  font-size: 2.4rem;
+}
+
+.hl-year {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  padding: 3px 12px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--ink);
+  background: var(--yellow);
+}
+
+.hl-card h3 {
+  margin: 8px 0 6px;
+}
+
+.hl-card p {
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.hl-club {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--purple);
+}
+
+.hl-card.featured {
+  grid-column: span 2;
+  color: #fff;
+  background: linear-gradient(135deg, var(--purple), var(--pink));
+}
+
+.hl-card.featured p,
+.hl-card.featured .hl-club {
+  color: #fff;
+>>>>>>> 2bc30bf (Add styles for highlight numbers and achievement cards)
 }
